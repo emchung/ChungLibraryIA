@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="database.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Mr. Roger's Library</title>
+</head>
+<body>
+<div id="siteTitle">Mr. Roger's Library</div>
+<div id="action">Select Action<br><select id="actionbutton">
+    <option value="select">Select Parameter</option>
+    <option value="searchaction" id="searchaction">Search</option>
+    <option value="returnaction" id="returnaction">Return</option>
+    <option value="borrowaction" id="borrowaction">Borrow</option>
+    <option value="addaction" id="addaction">Add Book</option>
+    <option value="catalogueaction" id="catalogueaction">Show catalogue</option>
+    <option value="reviewaction" id="reviewaction">Get Book Reviews</option>
+</select></div>
+<div id="bookName" class="borrow return add">Book Title<br><input type="text" id="bookTitle"></div>
+<!--<div class="search">Status<br>-->
+<!--<select id="status">-->
+<!--<option value="borrowed" id="borrowed">Borrowing</option>-->
+<!--<option value="returned" id="returned">Returning</option>-->
+<!--</select></div>-->
+<div class="borrow return">Student Name<br><input type="text" class="borrow return" id="studentName"></div>
+<div class="borrow return add">Author<br><input type="text" class="borrow return add" id="author"></div>
+<div class="add">ISBN<br><input type="text" class="add" id="isbn"></div>
+<div class="add"><select id="categoriesadd">
+    <option value="select">Select Category</option>
+    <option value="teaching">Teaching</option>
+    <option value="literature">Literature</option>
+    <option value="international">International</option>
+</select></div>
+<div class="borrow return">
+    <div>Month<br>
+        <select id="month">
+            <option value="January ">January</option>
+            <option value="February ">February</option>
+            <option value="March ">March</option>
+            <option value="April ">April</option>
+            <option value="May ">May</option>
+            <option value="June ">June</option>
+            <option value="July ">July</option>
+            <option value="August ">August</option>
+            <option value="September ">September</option>
+            <option value="October ">October</option>
+            <option value="November ">November</option>
+            <option value="December ">December</option>
+        </select></div>
+    <div>Day<br>
+        <select id="day">
+            <option value="1 ">1</option>
+            <option value="2 ">2</option>
+            <option value="3 ">3</option>
+            <option value="4 ">4</option>
+            <option value="5 ">5</option>
+            <option value="6 ">6</option>
+            <option value="7 ">7</option>
+            <option value="8 ">8</option>
+            <option value="9 ">9</option>
+            <option value="10 ">10</option>
+            <option value="11 ">11</option>
+            <option value="12 ">12</option>
+            <option value="13 ">13</option>
+            <option value="14 ">14</option>
+            <option value="15 ">15</option>
+            <option value="16 ">16</option>
+            <option value="17 ">17</option>
+            <option value="18 ">18</option>
+            <option value="19 ">19</option>
+            <option value="20 ">20</option>
+            <option value="21 ">21</option>
+            <option value="22 ">22</option>
+            <option value="23 ">23</option>
+            <option value="24 ">24</option>
+            <option value="25 ">25</option>
+            <option value="26 ">26</option>
+            <option value="27 ">27</option>
+            <option value="28 ">28</option>
+            <option value="29 ">29</option>
+            <option value="30 ">30</option>
+            <option value="31 ">31</option>
+        </select></div>
+    <div>Year<br><input type="text" id="year" value="2016"></div>
+</div>
+<div class="borrow">Student Email<br><input type="text" class="borrow" id="email"></div>
+<button class="borrow" onclick="logBorrow()">Log Information</button>
+<button class="return" onclick="logReturn()">Log Information</button>
+<div class="review">Book:<input type="text" id="reviewsearch" value="Catcher in the Rye">
+</div>
+<div><button class="review" id="reviewbutton" onclick="urlcreate()">search</button></div>
+<div><table class="catalogue" id="cataloguetab" cellpadding="10"></table></div>
+<div><button class="catalogue" id="cataloguebutton" onclick="catalogue()">show</button></div>
+<div class="search">Search by
+    <select id="searchby">
+        <option value="select">Select Parameter</option>
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="category">Category</option>
+        <option value="studentName">Student Name</option>
+    </select>
+    <input type="text" id="searchvalue">
+    <select id="categories">
+        <option value="select">Select Category</option>
+        <option value="teaching">Teaching</option>
+        <option value="literature">Literature</option>
+        <option value="international">International</option>
+    </select>
+    <button class="search" onclick="search()" id="searchbutton">search</button></div>
+    <button class="add" onclick="addBook()" id="addbutton">Add Book</button>
+    <button class="add" id="addanother">Add Another</button>
+    <button class="add borrow return" onclick="download()" id="downloadbutton">Save</button>
+<div id="searchanother" class="search return borrow add review catalogue">Do Something Else<br><select id="searchanotherbutton">
+    <option value="select">Select Parameter</option>
+    <option value="searchmore" id="searchmore">Search</option>
+    <option value="returnmore" id="returnmore">Return</option>
+    <option value="reviewmore" id="reviewmore">Get Book Review</option>
+    <option value="borrowmore" id="borrowmore">Borrow</option>
+    <option value="catalogue" id="cataloguemore">Show Catalogue</option>
+    <option value="addmore" id="addmore">Add Book</option>
+</select></div>
+<div id="content"></div>
+<div id="output"></div>
+</body>
+</html>

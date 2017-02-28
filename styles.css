@@ -1,0 +1,49 @@
+body {
+    font-family: "Century Gothic";
+    /*background-image: url("http://static.simpledesktops.com/uploads/desktops/2016/07/19/Path.png");*/
+    background-image: url("http://static.simpledesktops.com/uploads/desktops/2012/09/05/Circle.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+#siteTitle{
+    font-size: 50px;
+    color: transparent;
+    /*background: -webkit-linear-gradient(#f9ba25, #4e8c75);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    -webkit-text-stroke: 1.5px #84b7aa;
+}
+
+div {
+    padding: 5px;
+}
+
+
+#title {
+    top: 5px;
+    left: 10px;
+    position: relative;
+}
+
+#searchanother {
+    padding: 50px;
+}
+
+
+#action {
+    font-size: 50px;
+    color: #ffaf02;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+}
+
+#output {
+    font-size: 20px;
+    font-family: "Century Gothic";
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
